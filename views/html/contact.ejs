@@ -1,0 +1,76 @@
+<head>
+  <link rel="stylesheet" href="/css/contact.css">
+</head>
+
+<%- include('../partials/header') %>
+      
+    <section class="ban fir">
+        <div class="headline"><h1>Contact Us</h1></div>
+    </section>
+    <div class="contai-ner">
+        <div class="left-column">
+            <h2>Get in <span style="color: #007AFF;">Touch</span></h2>
+            <p>We'd love to hear from you! Whether you have a question, need assistance, or want to discuss a project, feel free to get in touch with us. Our team is here to help.</p>
+
+            <form id="contact-form" action="https://api.web3forms.com/submit" method="POST">
+                <input type="hidden" name="access_key" value="c4fcec5c-3bdc-4da3-ad7d-d6119b630fb9">
+                <input type="t-ext" name="name" placeholder="Name*">
+                <input type="email" name="email" placeholder="Email*">
+                <input type="tel" name="tel" placeholder="Phone number*">
+                <select>
+                    <option value="">How did you find us?</option>
+                    <option value="Google">Google</option>
+                    <option value="Facebook">Facebook</option>
+                    <option value="Other">Other</option>
+                </select>
+                <button type="submit" class="send">SEND</button>
+            </form>
+
+            <div class="contact-info">
+                <div class="contact">
+                  <img src="/accuimages/phone-call.png" alt="Phone Icon">
+                  <p>+91-9579314891</p>
+                </div>
+                <div class="contact">
+                  <img src="/accuimages/download.jpeg" alt="Email Icon">
+                  <p>projects@accudesign.in</p>
+                </div>
+              </div>
+          
+        </div>
+
+        <div class="right-column">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3784.9424091983915!2d73.82213709999999!3d18.440923800000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc295c2bd2465db%3A0x1e95ccaa0122326f!2sACCU%20DESIGN!5e0!3m2!1sen!2sin!4v1740560184982!5m2!1sen!2sin" 
+            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </div>
+    <section id="team">
+        <h1>MEET OUR BEST TEAM</h1>
+        <div class="team-members">
+          <div class="member">
+            <img src="/accuimages/3d printng.png" alt="Suresh Dhanawade">
+            <h3>Suresh Dhanawade</h3>
+          </div>
+          <div class="member">
+            <img src="/accuimages/bending2.png" alt="Omkar Dhanawade">
+            <h3>Omkar Dhanawade</h3>
+          </div>
+          <div class="member">
+            <img src="/accuimages/laser2.png" alt="Newprakash Chandra">
+            <h3>Newprakash Chandra</h3>
+          </div>
+          <div class="member">
+            <img src="/accuimages/laser2.png" alt="Sunny Tiwari">
+            <h3>Sunny Tiwari</h3>
+          </div>
+        </div>
+      </section>
+      <a href="/contact"><img src="/accuimages/upward-arrow.png" alt="" style="right: 1%; top: 90%; width: 50px; padding-bottom: 5%;" class="scrolltop"></a>
+
+<!-- ----------footer ---------------------->
+<%- include('../partials/footer') %>
+
+<script src="../js/form.js"></script>
+<script src="../js/search-bar.js"></script>
+</body>
+</html>
