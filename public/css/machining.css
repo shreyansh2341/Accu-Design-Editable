@@ -1,0 +1,354 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', 'sans-sarif';
+}
+
+
+.mac {
+    background: rgba(0, 0, 0, 0.7) url('../accu images/machining1.png');
+    background-size: cover;
+    background-blend-mode: darken;
+    width: 100vw;
+}
+
+.ching {
+    height: 46vh;
+    width: 100%;
+    display: flex;
+    /* Use flexbox for centering */
+    justify-content: center;
+    /* Horizontally center */
+    align-items: center;
+    /* Vertically center */
+    flex-direction: column;
+    /* Optional: stack content vertically if needed */
+}
+
+.about {
+    /* Style your heading as needed */
+    color: white;
+    /* Example */
+    text-align: center;
+    /* Example */
+    font-size: 2em;
+    /* Example - adjust as needed */
+    /* Add any other styling you want for the heading */
+}
+
+.container {
+    width: 100vw;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    justify-content: space-evenly;
+}
+
+.left-side {
+    width: 40vw;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+    /* background-color: #f0f0f0; */
+    /* margin-left: 10em; */
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+    width: 20vw;
+}
+
+.buttons a button {
+    padding: 10px 15px;
+    width: 20vw;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.buttons a button {
+    text-decoration: none;
+    color: #fff;
+    font-size: 15px;
+}
+
+.buttons a button:hover {
+    background-color: #f3f7fa;
+    color: #b36500;
+    font-weight: 100;
+    font-size: 20px;
+
+}
+
+.buttons button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background-color: #b36500;
+    transform: translateX(-100%);
+    transition: transform 0.4s ease;
+
+}
+
+.buttons a button:hover::before {
+    transform: translateX(0);
+}
+
+.buttons a :hover {
+    transform: translateX(0);
+    background-color: #f3f7fa;
+    color: #b36500;
+}
+
+.left-side img {
+    width: 20vw;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 5px;
+    transition: .5s;
+}
+
+.right-image {
+    transition: transform 0.3s ease, filter 0.3s ease, box-shadow 0.3s ease;
+}
+
+.right-image:hover {
+    transform: scale(1.1);
+    filter: grayscale(1%);
+    box-shadow: 0 0 10px #b4f914;
+    /* Add a shadow */
+    transform: rotate(2deg) scale(1.1);
+}
+
+.image-link {
+    display: inline-block;
+    padding: 5px 10px;
+    background-color: #eee;
+    color: #333;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.s ease, box-shadow 0.3s ease;
+    box-shadow: 2px 2px 5px #007bff;
+}
+
+.image-link:hover {
+    background-color: #ddd;
+    transform: translateY(-2px);
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.image-link img {
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+
+.bottom-image {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.bottom-image:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 10px #b36500;
+}
+
+.right-side {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 45vw;
+    flex: 1;
+    padding: 20px;
+}
+
+.right-side img {
+    width: 25vw;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+.right-side h2 {
+    margin-bottom: 10px;
+    margin-left: 2em;
+}
+
+.right-side p {
+    margin-bottom: 20px;
+    text-align: justify;
+    margin-left: 3em;
+}
+
+.right-side ul {
+    list-style-type: disc;
+    margin-left: 4em;
+    margin-bottom: 20px;
+}
+
+.bottom-image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+/* Media query for smaller screens (example: tablets and phones) */
+@media (max-width: 768px) {  
+    html,body{
+        width: 100vw;
+        height: 100vh;
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+    }
+    .scrolltop{
+        display: none;
+    }
+    .ching {
+        height: 20vh; 
+        padding: 20px 0; 
+        width: 106.4vw; 
+    }
+
+    .about  {
+        font-size: 1.5em; 
+    }
+
+    .mac {
+        background-position: center; 
+    }
+}
+@media (max-width: 768px){
+    .container {
+        width: 100vw;
+        display: flex;
+        justify-content: space-between;
+    }
+    .right-side img{
+        width: 45vw;
+    }
+    .left-side img {
+        width: 35vw;
+    }
+    .buttons a button {
+        width: 30vw;
+        margin-left: -3em;
+    }
+
+}
+/* Media query for even smaller screens  */
+@media (max-width: 480px) {
+    html,body{
+        width: 100vw;
+        height: 100vh;
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+    }
+
+    .mac {
+        width: 100vw;
+    }
+    .scrolltop{
+        display: none;
+    }
+    .container {
+        width: 100vw;
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .left-side {
+        width: 80vw;
+        justify-content: center;
+    }
+
+    .buttons {
+        width: 70vw;
+    }
+
+    .buttons a button {
+        width: 60vw;
+        margin-left: 1em;
+    }
+
+    .left-side img {
+        width: 70vw;
+    }
+
+    .right-side {
+        width: 90vw;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .right-side img {
+        width: 90vw;
+    }
+
+    .right-side h2 {
+        margin-left: 0.2em;
+    }
+
+    .right-side p {
+        margin-left: 0.2em;
+    }
+
+    .right-side ul {
+        margin-left: 1.5em;
+    }
+
+    .footer-col {
+        padding: 1em;
+    }
+}
+
+
+/* scrolltop button */
+.scrolltop {
+    animation-name: appear;
+    animation-timeline: scroll(y);
+    /* display: none; */
+}
+
+@keyframes appear {
+    0% {
+        opacity: 0;
+        display: none;
+        position: fixed;
+    }
+
+    3% {
+        opacity: 0;
+        display: none;
+    }
+
+    3.5% {
+        opacity: 1;
+        display: block;
+    }
+
+    100% {
+        opacity: 1;
+        display: block;
+        position: fixed;
+    }
+}

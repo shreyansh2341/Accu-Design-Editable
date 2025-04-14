@@ -1,0 +1,370 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+foooter {
+    line-height: 1.5;
+    font-family: 'Poppins', 'sans-sarif';
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', 'sans-sarif';
+}
+
+.sec-tion {
+    display: flex;
+    flex-wrap: wrap;
+    /* Allows elements to wrap on smaller screens */
+    align-items: center;
+    /* Vertically aligns items */
+    padding: 20px;
+    flex-direction: row-reverse;
+    margin-top: 20px;
+}
+
+.te-xt {
+    flex: 1;
+    /* Takes up available space */
+    padding: 20px;
+}
+
+.te-xt h2 {
+    text-align: left;
+    padding-left: 6em;
+}
+
+.te-xt h1 {
+    font-size: 2.5em;
+    /* Adjust font size for responsiveness */
+    margin-bottom: 10px;
+    text-align: center;
+    padding-top: 0.1em;
+}
+
+.te-xt p {
+    margin-bottom: 20px;
+    text-align: justify;
+    /* background-color: #24262b; */
+}
+
+.sec-tion img {
+    flex: 1;
+    /* Takes up available space */
+    max-width: 45%;
+    /* Ensures image doesn't overflow container */
+    height: auto;
+    padding: 20px;
+    box-sizing: border-box;
+    /* Include padding and border in element's total width and height */
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 480px) {
+    .te-xt h2 {
+        margin-left: -4em;
+    }
+}
+
+@media (max-width: 768px) {
+
+    /* Adjust breakpoint as needed */
+    .sec-tion {
+        flex-direction: column;
+        /* Stack elements vertically */
+        flex-direction: column-reverse;
+    }
+
+    .te-xt h1 {
+        font-size: 2em;
+    }
+
+    .te-xt h2 {
+        text-align: left;
+        padding-left: 8em;
+    }
+
+    .te-xt p {
+        text-align: left;
+        text-align: justify;
+    }
+
+    .sec-tion img {
+        order: -1;
+        /* Place image above text on smaller screens */
+        max-height: fit-content;
+    }
+
+}
+
+/* About Us main page */
+.back {
+    background: rgba(0, 0, 0, 0.7) url('../images/Mask\ group\ \(2\).png');
+    background-size: cover;
+    background-blend-mode: darken;
+    width: 100vw;
+
+}
+
+.first {
+    height: 46vh;
+    width: 100%;
+    display: flex;
+    /* Use flexbox for centering */
+    justify-content: center;
+    /* Horizontally center */
+    align-items: center;
+    /* Vertically center */
+    flex-direction: column;
+    /* Optional: stack content vertically if needed */
+}
+
+.about h1 {
+    color: #ffffff;
+    font-size: 50px;
+    text-align: center;
+    font-weight: 100;
+}
+
+/* Media query for smaller screens (example: tablets and phones) */
+@media (max-width: 768px) {
+
+    html,
+    body {
+        width: 100vw;
+        height: 100vh;
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+    }
+
+    .scrolltop {
+        display: none;
+    }
+
+    .first {
+        height: 15vh;
+        padding: 20px 0;
+        width: 106.4vw;
+    }
+
+    .about h1 {
+        font-size: 1.5em;
+    }
+
+    .back {
+        background-position: center;
+    }
+}
+
+.abot {
+    width: 100%;
+    overflow: hidden;
+}
+
+.center h1 {
+    text-align: center;
+}
+
+.timeline {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 0 9%;
+}
+
+.timeline .timelinerow {
+    display: flex;
+    column-gap: 64px;
+    flex-wrap: wrap;
+}
+
+.timelinerow .timelinecol {
+    flex: 1 1 320px;
+}
+
+.timelinecol .tit {
+    position: relative;
+    display: inline-block;
+    font-size: 28px;
+    margin: 32px 0 16px 30px;
+
+}
+
+.timelinecol .timelinebox {
+    position: relative;
+    border-left: 3px solid #2479C2;
+}
+
+.timelinebox .timelinecont::before {
+    content: '';
+    top: 1;
+    left: -10.6px;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: #2479C2;
+    border-radius: 50%;
+}
+
+.timelinebox .timelinecont {
+    padding-left: 27px;
+}
+
+.timelinecont .con {
+    padding: 24px;
+    border: 3px solid #2479C2;
+    border-radius: 8px;
+    margin-bottom: 32px;
+}
+
+.timelinecont .con h3 {
+    font-size: 20px;
+    margin: 8px 0;
+}
+
+.timelinecont .con pa {
+    font-size: 18px;
+    margin: 8px 0;
+    text-align: justify;
+}
+
+.animate {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 105%;
+    height: 100%;
+    background: #fff;
+    animation: show-right 1s ease forwards;
+    animation-delay: calc(.5s * var(--i));
+}
+
+/* scroll button */
+.scrolltop {
+    animation-name: appear;
+    animation-timeline: scroll(y);
+}
+
+@keyframes appear {
+    0% {
+        opacity: 0;
+        display: none;
+        position: fixed;
+    }
+
+    3% {
+        opacity: 0;
+        display: none;
+    }
+
+    3.5% {
+        opacity: 1;
+        display: block;
+    }
+
+    100% {
+        opacity: 1;
+        display: block;
+        position: fixed;
+    }
+}
+
+@keyframes show-right {
+    100% {
+        width: 0;
+    }
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px;
+    gap: 20px;
+}
+
+.left-text,
+.right-text {
+    flex: 1 1 45%;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: justify;
+}
+
+.left-text h2,
+.right-text h2 {
+    margin-bottom: 10px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+
+    /* Adjust breakpoint as needed */
+    .left-text,
+    .right-text {
+        flex: 1 1 100%;
+        /* Each item takes up full width on smaller screens */
+        margin-bottom: 20px;
+        /* Add some space between stacked items */
+    }
+
+    .container {
+        flex-direction: column;
+        /* Stack the containers vertically */
+    }
+}
+
+/* Example styling (optional - customize as needed) */
+.left-text {
+    background-color: #e0e0e0;
+    /* Light gray background for left sections */
+    border-radius: 5px;
+    border: 1px solid #FFA500;
+}
+
+.right-text {
+    background-color: #e0e0e0;
+    /* Slightly darker gray for right sections */
+    border-radius: 5px;
+    border: 1px solid #FFA500;
+}
+
+.about-col {
+    font-family: sans-serif;
+    /* Choose a suitable font */
+    line-height: 1.6;
+    /* Improve readability */
+    color: #333;
+    /* Dark gray text color */
+    padding: 1rem;
+    /* Add some padding around the content */
+    border: 1px solid #FFA500;
+    border-radius: 50px;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+}
+
+.about-col h3 {
+    color: #007bff;
+    /* Blue color for headings (you can customize) */
+    margin-bottom: 10px;
+    /* Space below the heading */
+    border-bottom: 1px solid #ddd;
+    /* Subtle line under heading */
+    padding-bottom: 5px;
+    /* Padding below the line */
+}
+
+.about-col p {
+    margin-bottom: 15px;
+    /* Space between paragraphs */
+    text-align: justify;
+    margin-top: 12px;
+}
+
+.about-col br {
+    display: none;
+    /* Remove default <br> tag styling if needed */
+}

@@ -1,0 +1,213 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family:'sans serif', 'Poppins';
+}
+.ban{
+    background: rgba(0, 0, 0, 0.7) url('../images/contact.png');
+    background-size: cover;
+    background-blend-mode: darken;
+}
+.fir{
+    height: 40vh;
+}
+.headline h1{
+  color: white;
+  text-align: center;
+  font-size: 2em;
+}
+
+a {
+  text-decoration: none;
+  /* color: #007AFF; */
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #0056b3;
+}
+
+/* Container Styles */
+.contai-ner {
+  display: flex;
+  flex-wrap: wrap; /* Important for responsiveness */
+  padding: 40px;
+  align-items: flex-start; /* Align items to the top of the container */
+}
+
+.left-column,
+.right-column {
+  flex: 1; /* Each column takes up equal space */
+  padding: 20px;
+}
+
+/* Left Column Styles */
+.left-column h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: #212529;
+}
+
+.left-column p {
+  margin-bottom: 30px;
+  color: #555;
+}
+
+#contact-form {
+  display: flex;
+  flex-direction: column;
+} 
+
+ #contact-form input,
+#contact-form select {
+  margin-bottom: 15px;
+  padding: 10px;
+  border: 1px solid #ced4da;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.send {
+  padding: 12px 25px;
+  background-color: #007AFF;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.send:hover {
+  background-color: #0056b3;
+}
+
+.contact-info {
+  margin-top: 30px;
+}
+
+.contact {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.contact img {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+  margin-top: -1.5em;
+}
+
+/* Right Column Styles */
+.right-column img {
+  max-width: 80%;
+  height: auto;
+  border-radius: 8px; /* Rounded corners for the map */
+  box-shadow: 0 4px 8px white; /* Add a subtle shadow */
+  display: block; /* Prevents a small space below the image */
+}
+.right-column {
+  background-color: #007AFF;
+  width: 50%;
+}
+
+/* Team Section Styles */
+#team {
+  padding: 40px;
+  text-align: center;
+  background-color: #f8f9fa; /* Light background for team section */
+}
+
+#team h1 {
+  font-size: 2.5em;
+  margin-bottom: 30px;
+  color: #212529;
+}
+
+.team-members {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.member {
+  margin: 20px;
+  text-align: center;
+}
+
+.member img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%; /* Make images circular */
+  object-fit: cover;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease; /* smooth transformation on hover */
+}
+
+.member img:hover {
+  transform: scale(1.05); /* slightly enlarge image on hover */
+}
+
+
+.member h3 {
+  margin-top: 15px;
+  color: #343a40;
+}
+
+
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .contai-ner {
+    flex-direction: column; /* Stack columns vertically */
+    padding: 20px;
+  }
+
+  .left-column,
+  .right-column {
+    padding: 10px;
+  }
+  .right-column img {
+    justify-items: center;
+  }
+
+  #team h1 {
+    font-size: 2em;
+  }
+
+  .member {
+    margin: 15px;
+  }
+
+  .member img {
+    width: 120px;
+    height: 120px;
+  }
+}
+
+@media (max-width: 500px) { /* For smaller screens like phones */
+    .member img {
+        width: 100px;
+        height: 100px;
+    }
+}
+@keyframes appear{
+  0%{
+      opacity: 0;
+      display: none;
+      position: fixed;
+  }
+  3%{
+      opacity: 0;
+      display: none;
+  }
+  3.5%{
+      opacity: 1;
+      display: block;
+  }
+  100%{
+      opacity: 1;
+      display: block;
+      position: fixed;
+  }
+}
