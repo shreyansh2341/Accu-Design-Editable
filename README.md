@@ -31,3 +31,7 @@ JAVASCRIPT
 
 Contributing 🤝
 Contributions are welcome! Fork this repo and submit a PR.
+
+Installation
+Clone the repository:
+https://github.com/shreyansh2341/Accu-Design-Editable.git
